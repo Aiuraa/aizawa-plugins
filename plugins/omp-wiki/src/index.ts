@@ -37,28 +37,25 @@ export default {
 			inputType: 1,
 
 			execute: (args, ctx) => {
-				try {
-					const term = args[0].value as string;
+				//const term = args[0].value as string;
 
-					Author.sendMessage(ctx.channel.id, {
-						content: "Hello world!"
-					});
-					/*
-					if (term.substring(0, 2) === "On") {
-						Author.sendMessage(ctx.channel.id, {
-							content: `${term} is a callback!`
-						}); //return await GetOmpCallbackInfo(term);
-					}
-					
+				Author.sendMessage(ctx.channel.id, {
+					content: "Hello world!"
+				});
 
+				Clayde.sendMessage(ctx.channel.id, "Hello too!");
+				/*
+				if (term.substring(0, 2) === "On") {
 					Author.sendMessage(ctx.channel.id, {
-						content: `${term} is not a callback!`
-					}); //return content: await `${term} is not a callback!`;
-					*/
+						content: `${term} is a callback!`
+					}); //return await GetOmpCallbackInfo(term);
 				}
-				catch (err: any) {
-					Clayde.sendBotMessage(ctx.channel.id, "I think the api went down again, damn");
-				}
+				
+
+				Author.sendMessage(ctx.channel.id, {
+					content: `${term} is not a callback!`
+				}); //return content: await `${term} is not a callback!`;
+				*/
 			}
 		});
 		logger.log("Success registering /ompinfo commands.");
