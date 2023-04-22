@@ -32,7 +32,7 @@ export default {
 				required: true,
 				// @ts-ignrore
 				type: 3
-			}]
+			}],
 			// @ts-ignrore
 			type: 1,
 			applicationId: "-1",
