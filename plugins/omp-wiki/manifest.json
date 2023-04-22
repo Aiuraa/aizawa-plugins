@@ -1,0 +1,14 @@
+{
+    "name": "open.mp Wiki Commands",
+    "description": "An built-in commands for accessing open.mp documentation anywhere, anytime.",
+    "authors": [
+        {
+            "name": "Gotoh Aizawa",
+            "id": "805684323449176074"
+        }
+    ],
+    "main": "src/index.ts",
+    "vendetta": {
+        "icon": "ic_badge_staff"
+    }
+}
