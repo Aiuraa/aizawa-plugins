@@ -30,33 +30,37 @@ export default {
 				description: "The term you want to search from wiki",
 				displayDescription: "The term you want to search from wiki",
 				required: true,
-				// @ts-ignrore
 				type: 3
 			}],
-			// @ts-ignrore
 			type: 1,
 			applicationId: "-1",
 			inputType: 1,
 
-			execute: async (args, ctx) => {
+			execute: (args, ctx) => {
 				try {
 					const term = args[0].value as string;
 
+					Author.sendMessage(ctx.channel.id, {
+						content: "Hello world!"
+					});
+					/*
 					if (term.substring(0, 2) === "On") {
 						Author.sendMessage(ctx.channel.id, {
 							content: `${term} is a callback!`
 						}); //return await GetOmpCallbackInfo(term);
 					}
+					
 
 					Author.sendMessage(ctx.channel.id, {
 						content: `${term} is not a callback!`
 					}); //return content: await `${term} is not a callback!`;
+					*/
 				}
 				catch (err: any) {
 					Clayde.sendBotMessage(ctx.channel.id, "I think the api went down again, damn");
 				}
 			}
-		})
+		});
 		logger.log("Success registering /ompinfo commands.");
 	},
 	onUnload: () => {
