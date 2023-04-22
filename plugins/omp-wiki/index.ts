@@ -2,13 +2,14 @@ import { logger } from '@vendetta';
 import { registerCommand } from "@vendetta/commands";
 
 /*
-//https://api.open.mp/docs/search?q=%s
+https://api.open.mp/docs/search?q=%s
 async function getOmpDocs(query) {
 	const response = await fetch(`https://api.open.mp/docs/search?q=${query}`);
 	const data = await response.json();
 	return ...;
 }
 */
+
 let info_cmd = [];
 
 export default {
@@ -29,6 +30,5 @@ export default {
 	onUnload: () => {
 	    logger.log("Unload omp-wiki plugins.");
 	    info_cmd();
-	},
-	settings: Settings,
+	}
 }
