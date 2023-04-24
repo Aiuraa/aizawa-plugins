@@ -1,20 +1,22 @@
 import { logger } from '@vendetta';
 import { registerCommand } from "@vendetta/commands";
-import { FindByProps } from "@vendetta/metro";
+import { findByProps } from "@vendetta/metro";
 
-/*
-https://api.open.mp/docs/search?q=%s
-async function getOmpDocs(query) {
+async function ParseDocs(query) {
 	const response = await fetch(`https://api.open.mp/docs/search?q=${query}`);
 	const data = await response.json();
-	return ...;
+	
+	var parsed = `Got ${data["total"]} results, took ${data["took"] / 1000}ms.\n`;
+	data["hits"].forEach((el, idx) => {
+		if (idx >= 4) return;
+		parsed.concat(`> \`\`\`Title: ${el.name}\n> Description: ${el.desc}\`\`\`\n> Link: https://open.mp/${el.url}`);
+	});
+
+	return parsed;
 }
-*/
 
 let info_cmd = [];
-
-let Clayde = FindByProps("sendBotMessage");
-let Author = FindByProps("sendMessage", "receiveMessage");
+let Author = findByProps("sendMessage", "receiveMessage");
 
 export default {
 	onLoad: () => {
@@ -36,26 +38,12 @@ export default {
 			applicationId: "-1",
 			inputType: 1,
 
-			execute: (args, ctx) => {
-				//const term = args[0].value as string;
+			execute: async (args, ctx) => {
+				const term = args[0].value as string;
 
-				Author.sendMessage(ctx.channel.id, {
-					content: "Hello world!"
+				await Author.sendMessage(ctx.channel.id, {
+					content: await ParseDocs(term);
 				});
-
-				Clayde.sendMessage(ctx.channel.id, "Hello too!");
-				/*
-				if (term.substring(0, 2) === "On") {
-					Author.sendMessage(ctx.channel.id, {
-						content: `${term} is a callback!`
-					}); //return await GetOmpCallbackInfo(term);
-				}
-				
-
-				Author.sendMessage(ctx.channel.id, {
-					content: `${term} is not a callback!`
-				}); //return content: await `${term} is not a callback!`;
-				*/
 			}
 		});
 		logger.log("Success registering /ompinfo commands.");
