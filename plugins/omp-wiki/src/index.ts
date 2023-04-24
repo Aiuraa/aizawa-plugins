@@ -20,7 +20,7 @@ async function ParseDocs(query) {
 
 		if (!isFoundBestMatch)
 		{
-			parsed += `> Link: https://open.mp/${el.url}\n\n`;		
+			parsed += `> Link: https://www.open.mp/${el.url}\n\n`;
 		}
 	});
 
