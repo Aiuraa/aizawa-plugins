@@ -1,5 +1,5 @@
 {
-    "name": "open.mp Wiki Commands",
+    "name": "/ompinfo",
     "description": "A built-in commands for accessing open.mp documentation anywhere, anytime.",
     "authors": [
         {
