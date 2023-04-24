@@ -6,10 +6,12 @@ async function ParseDocs(query) {
 	const response = await fetch(`https://api.open.mp/docs/search?q=${query}`);
 	const data = await response.json();
 	
-	var parsed = `Got ${data["total"]} results, took ${data["took"] / 1000}ms.\n`;
-	data["hits"].forEach((el, idx) => {
+	var parsed = `Got ${data.total} results, took ${data.took / 1000}ms.\n`;
+
+	data.hits.forEach((el, idx) => {
 		if (idx >= 4) return;
-		parsed.concat(`> \`\`\`Title: ${el.name}\n> Description: ${el.desc}\`\`\`\n> Link: https://open.mp/${el.url}`);
+		parsed += `> \`\`\`Title: ${el.title}\n> Description: ${el.desc}\`\`\`\n> Link: https://open.mp/${el.url}\n\n`;
+		
 	});
 
 	return parsed;
