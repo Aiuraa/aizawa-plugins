@@ -1,9 +1,9 @@
 {
     "name": "open.mp Wiki Commands",
-    "description": "An built-in commands for accessing open.mp documentation anywhere, anytime.",
+    "description": "A built-in commands for accessing open.mp documentation anywhere, anytime.",
     "authors": [
         {
-            "name": "Gotoh Aizawa",
+            "name": "Aizawa",
             "id": "805684323449176074"
         }
     ],
