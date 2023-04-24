@@ -15,6 +15,7 @@ async function ParseDocs(query) {
 		if (el.title === query && !isFoundBestMatch)
 		{
 			parsed = `Show matching results (took ${data.took / 1000}ms).\n> \`\`\`Title: ${el.title}\n> Description: ${el.desc}\`\`\`\n> Link: https://www.open.mp/${el.url}`;
+			isFoundBestMatch = true;
 			return;
 		}
 
