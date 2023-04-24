@@ -42,7 +42,7 @@ export default {
 				const term = args[0].value as string;
 
 				await Author.sendMessage(ctx.channel.id, {
-					content: await ParseDocs(term);
+					content: await ParseDocs(term)
 				});
 			}
 		});
