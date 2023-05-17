@@ -8,7 +8,7 @@ Paste a plugin URL into the Plugins page of Vendetta, following a basic format o
 
 https://`YOUR_GITHUB_USERNAME`.github.io/`REPO_NAME`/`PLUGIN_NAME`-->
 
-# Aizawa Plugins
+# Vendetta Plugins
 This repo contains a collection of Vendetta Plugins which maintained by me.
 
 # How to install?
