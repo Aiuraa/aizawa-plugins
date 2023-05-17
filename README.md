@@ -9,11 +9,11 @@ Paste a plugin URL into the Plugins page of Vendetta, following a basic format o
 https://`YOUR_GITHUB_USERNAME`.github.io/`REPO_NAME`/`PLUGIN_NAME`-->
 
 # Aizawa Plugins
-This repo contains a collection of Vendetta Plugins which maintained by me, Aizawa.
+This repo contains a collection of Vendetta Plugins which maintained by me.
 
 # How to install?
-In order to use any plugins, please copy the following below:
+In order to use plugins, please copy the following below:
 
 ```
-https://aiuraa.github.cio/aizawa-plugins/omp-wiki
+https://aiuraa.github.io/vendetta-plugins/omp-wiki
 ```
