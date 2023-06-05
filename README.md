@@ -12,8 +12,4 @@ https://`YOUR_GITHUB_USERNAME`.github.io/`REPO_NAME`/`PLUGIN_NAME`-->
 This repo contains a collection of Vendetta Plugins which maintained by me.
 
 # How to install?
-In order to use plugins, please copy the following below:
-
-```
-https://pxlrl.github.io/vendetta-plugins/plugin-name
-```
+In order to use plugins, just go to my website [here](https://pxlrl.github.io/vd-plugins) hehe.
