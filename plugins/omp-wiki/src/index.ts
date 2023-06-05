@@ -6,7 +6,7 @@ async function ParseDocs(query) {
 	const response = await fetch(`https://api.open.mp/docs/search?q=${query}`);
 	const data = await response.json();
 	
-	var parsed = `Got ${data.total} results, showing 4 links related to ${query} (took ${data.took / 1000}ms).\n`;
+	var parsed = `Got ${data.total} results, showing lists of related to ${query} (took ${data.took / 1000}ms).\n`;
 	var isFoundBestMatch = false;
 
 	data.hits.forEach((el, idx) => {
